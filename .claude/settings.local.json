@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git remote:*)",
+      "Bash(git push:*)",
+      "Bash(./mvnw -version 2>&1)",
+      "Bash(./mvnw spring-boot:run)"
+    ]
+  }
+}

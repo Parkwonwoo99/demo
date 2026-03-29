@@ -84,6 +84,13 @@
 			<scope>provided</scope>
 		</dependency>
 
+		<!-- 외부 Tomcat이 제공하므로 provided -->
+		<dependency>
+			<groupId>jakarta.servlet</groupId>
+			<artifactId>jakarta.servlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
 		<!-- JSTL -->
 		<dependency>
 			<groupId>jakarta.servlet.jsp.jstl</groupId>
@@ -92,7 +99,15 @@
 		<dependency>
 			<groupId>org.glassfish.web</groupId>
 			<artifactId>jakarta.servlet.jsp.jstl</artifactId>
+			<version>3.0.1</version>
+			<exclusions>
+				<exclusion>
+					<groupId>jakarta.servlet.jsp.jstl</groupId>
+					<artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
+
 	</dependencies>
 
 	<build>
