@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss} [%level] %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 프로젝트 패키지 로그 -->
+    <logger name="com.example.demo" level="DEBUG"/>
+
+    <!-- MyBatis 쿼리 로그 -->
+    <logger name="com.example.demo.dao" level="TRACE"/>
+
+    <!-- HikariCP 로그 제거 -->
+    <logger name="com.zaxxer.hikari" level="WARN"/>
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+</configuration>
